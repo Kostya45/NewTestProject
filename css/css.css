@@ -1,0 +1,236 @@
+body {
+	background-color: #006699;
+	margin: 0;
+}
+
+#head {
+	position: relative;
+	background-color: #FF9900;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 10px 0px 10px;
+	margin-bottom: 1%;
+}
+
+#head img {
+	float: left;
+	width: 30px;
+	height: 30px;
+}
+
+#footer {
+    left: 0; 
+    bottom: 0; 
+    color: red; 
+    background-color: black;
+}
+
+#topMenu {
+	padding-left: 15%;
+	background-color: red;
+}
+
+#topMenu ul li {
+	display: inline;
+	margin-right: 5px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	color: #003399;
+}
+
+.class,
+.selected,
+.hotel {
+	min-width: 545px;
+	margin-left: 18%;
+	margin-right: 18%;
+}
+
+.class1 {
+	background-color: white;
+	padding-bottom: 1%;
+	border: 1px solid #F76320;
+	display: block;
+	box-shadow: 0 0 0,2px 0 2px #d5d5d5,
+					-2px 0 2px #d5d5d5,
+					0 2px 2px #d5d5d5;
+}
+.class1:first-child {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	box-shadow: 0 -2px 2px #d5d5d5,
+				2px -2px 2px #d5d5d5,
+				-2px -2px 2px #d5d5d5;
+}
+
+.class1:last-child {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 2px 0 2px #d5d5d5,	
+				-2px 0 2px #d5d5d5,
+				0 2px 2px #d5d5d5;
+	margin-bottom: 10px;
+}
+.image {
+	height: 100px;
+	width: 100px;
+	margin: 7px 7px 7px 7px;
+	border: 2px solid white;
+	float: left;
+}
+
+#selected,
+#history,
+#deletedBlocks {
+	display: none;
+}
+
+.class1:hover em {
+	opacity: 1;
+	color: blue;
+}
+
+.class1:hover .color {
+	opacity: 1;
+	color: blue;
+}
+
+em {
+	text-decoration: none;
+	opacity: 0;
+	color: blue;
+	float: right;
+}
+
+.more {
+	display: none;
+}
+
+.grey {
+	color: grey;
+}
+
+.class1 > a {
+	color: #257EFE;
+}
+
+h4 {
+	text-align: center;
+}
+
+.hotel {
+	display: none;
+}
+
+textarea {
+	resize: none;
+	width: 100%;
+	height:150px;	
+}
+
+.left  {
+	float: left;
+}
+
+a.cancel {
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+	padding: .8em 1em calc(.8em + 3px);
+	border-radius: 3px;
+	background: rgb(248,93,89);
+	box-shadow: 0 -3px rgb(244,52,47) inset;
+	transition: 0.2s;
+	float: right;
+} 
+
+a.cancel:hover { 
+	background: rgb(244,52,47); 
+}
+
+a.cancel:active {
+	background: rgb(201,18,13);
+	box-shadow: 0 3px rgb(201,18,13) inset;
+}
+
+a.save {
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+	padding: .8em 1em calc(.8em + 3px);
+	border-radius: 3px;
+	background: rgb(64,199,129);
+	box-shadow: 0 -3px rgb(53,167,110) inset;
+	transition: 0.2s;
+	float: right;
+} 
+
+a.save:hover { 
+	background: rgb(53, 167, 110); 
+}
+
+a.save:active {
+	background: rgb(33,147,90);
+	box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+fieldset {
+	border-color: #317ED8;
+	border-radius: 10px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.close {
+	display: none;
+	float: right;
+}
+
+.close img {
+	width: 20px;
+	height: 20px;
+}
+
+.menu {
+	font-family: Gabriola;
+	line-height: 1.3;
+	font-size: 20px;
+	margin-left: 1%;
+	background-color: #FF6600;
+	position: absolute;
+	position: fixed;
+	border: 2px solid #9C9C9C;
+	border-radius: 10px;
+}
+
+.menu ul li {
+	margin: 0 10px 0 -30px;
+	list-style-type: none;
+}
+
+h3 {
+	text-align: center;
+	color: red;
+}
+
+#podMenuDeleted,
+#podMenuHistory {
+	display: none;
+}
+
+.red a:active {
+	color: red;
+}
