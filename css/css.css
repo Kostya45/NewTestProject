@@ -3,6 +3,15 @@ body {
 	margin: 0;
 }
 
+
+em {
+	text-decoration: none;
+	opacity: 0;
+	color: blue;
+	float: right;
+}
+
+/*Верх страницы*/
 #head {
 	position: relative;
 	background-color: #FF9900;
@@ -12,30 +21,9 @@ body {
 	padding: 10px 0px 10px;
 	margin-bottom: 1%;
 }
+/*конец*/
 
-#head img {
-	float: left;
-	width: 30px;
-	height: 30px;
-}
-
-#footer {
-    left: 0; 
-    bottom: 0; 
-    color: red; 
-    background-color: black;
-}
-
-#topMenu {
-	padding-left: 15%;
-	background-color: red;
-}
-
-#topMenu ul li {
-	display: inline;
-	margin-right: 5px;
-}
-
+/*Стандартные настройки ссылок*/
 a {
 	text-decoration: none;
 	color: white;
@@ -44,7 +32,8 @@ a {
 a:hover {
 	color: #003399;
 }
-
+/*конец*/
+/*Основные классы/блоки*/
 .class,
 .selected,
 .hotel {
@@ -78,19 +67,6 @@ a:hover {
 				0 2px 2px #d5d5d5;
 	margin-bottom: 10px;
 }
-.image {
-	height: 100px;
-	width: 100px;
-	margin: 7px 7px 7px 7px;
-	border: 2px solid white;
-	float: left;
-}
-
-#selected,
-#history,
-#deletedBlocks {
-	display: none;
-}
 
 .class1:hover em {
 	opacity: 1;
@@ -102,43 +78,55 @@ a:hover {
 	color: blue;
 }
 
-em {
-	text-decoration: none;
-	opacity: 0;
-	color: blue;
-	float: right;
+.class1 > a {
+	color: #257EFE;
 }
 
-.more {
+#selected,
+#history,
+#deletedBlocks {
 	display: none;
 }
 
 .grey {
 	color: grey;
 }
+/*конец*/
 
-.class1 > a {
-	color: #257EFE;
+/*Стили картинок*/
+.image {
+	height: 100px;
+	width: 100px;
+	margin: 7px 7px 7px 7px;
+	border: 2px solid white;
+	float: left;
+}
+/*конец*/
+
+/*Закрывает большую часть описания*/
+.more {
+	display: none;
+}
+/*конец*/
+
+/*Стили заголовков*/
+h3 {
+	text-align: center;
+	color: red;
 }
 
 h4 {
 	text-align: center;
 }
+/*конец*/
 
+/*Добавление нового отеля*/
 .hotel {
 	display: none;
 }
+/*конец*/
 
-textarea {
-	resize: none;
-	width: 100%;
-	height:150px;	
-}
-
-.left  {
-	float: left;
-}
-
+/*Кнопка сохранить/отмена*/
 a.cancel {
 	font-weight: 700;
 	color: white;
@@ -180,12 +168,22 @@ a.save:active {
 	background: rgb(33,147,90);
 	box-shadow: 0 3px rgb(33,147,90) inset;
 }
+/*конец*/
 
+/*Настройка формы*/
 fieldset {
 	border-color: #317ED8;
 	border-radius: 10px;
 }
 
+textarea {
+	resize: none;
+	width: 100%;
+	height:150px;	
+}
+/*конец*/
+
+/*Обтекание*/
 .left {
 	float: left;
 }
@@ -193,7 +191,9 @@ fieldset {
 .right {
 	float: right;
 }
+/*конец*/
 
+/*стили для картинки удаления*/
 .close {
 	display: none;
 	float: right;
@@ -203,7 +203,9 @@ fieldset {
 	width: 20px;
 	height: 20px;
 }
+/*конец*/
 
+/*Стили для меню/подменю*/
 .menu {
 	font-family: Gabriola;
 	line-height: 1.3;
@@ -221,11 +223,6 @@ fieldset {
 	list-style-type: none;
 }
 
-h3 {
-	text-align: center;
-	color: red;
-}
-
 #podMenuDeleted,
 #podMenuHistory {
 	display: none;
@@ -234,3 +231,4 @@ h3 {
 .red a:active {
 	color: red;
 }
+/*конец*/

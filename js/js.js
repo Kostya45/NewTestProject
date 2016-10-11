@@ -1,67 +1,55 @@
 "use strict";
 
 document.getElementById('placeView').onclick = place;
+document.getElementById('newHotel').onclick = hideAll;
+
+document.getElementById('historyS').onclick = open;
 document.getElementById('selectedView').onclick = selected;
 document.getElementById('historyView').onclick = history;
 document.getElementById('deletedBlocksView').onclick = deletedBlocks;
-document.getElementById('newHotel').onclick = hideAll;
-document.getElementById('closeLoc').onclick = closeLocation;
+
+document.getElementById('deletedView').onclick = open;
+document.getElementById('closeLoc').onclick = deleteLocation;
 document.getElementById('closeAll').onclick = closeAll;
-document.getElementById('historyS').onclick = open1;
-document.getElementById('deletedView').onclick = open2;
+
 document.getElementById('cancel').onclick = cancel;
 document.getElementById('showImage').onclick = image;
 
 document.getElementById('save').onclick = newHotel;
 
-function closeCreate() {
-	document.getElementById("createHotel").style.display = "none";
-}
 
 function place() {
+	hide();
 	document.getElementById('place').style.display = "block";
-	document.getElementById('selected').style.display = "none";
-	document.getElementById('history').style.display = "none";
-	document.getElementById('deletedBlocks').style.display = "none";
-	closeCreate();
 }
 
 function selected() {
-	closeCreate();
-	document.getElementById('place').style.display = "none";
+	hide();
 	document.getElementById('selected').style.display = "block";
-	document.getElementById('history').style.display = "none";
-	document.getElementById('deletedBlocks').style.display = "none";
 }
 
 function history() {
-	closeCreate();
-	document.getElementById('place').style.display = "none";
-	document.getElementById('selected').style.display = "none";
+	hide();
 	document.getElementById('history').style.display = "block";
-	document.getElementById('deletedBlocks').style.display = "none";
 	var count = $('#history div.class1').length;
 	if (count-1 == 0) {
-		document.getElementById('infoAdded').innerHTML = '<h3 id="infoAdded">Добавленные блоки</h3>'
+		document.getElementById('infoAdded').innerHTML = '<h3 id="infoAdded">Добавленные блоки</h3>';
 	}
 	else {
-		count = count-1
+		count = count-1;
 		document.getElementById('infoAdded').innerHTML = '<h3 id="infoAdded">Добавленные блоки '+count+'</h3>';
 	}
 }
 
 function deletedBlocks() {
-	closeCreate();
-	document.getElementById('place').style.display = "none";
-	document.getElementById('selected').style.display = "none";
-	document.getElementById('history').style.display = "none";
+	hide();
 	document.getElementById('deletedBlocks').style.display = "block";
 	var count = $('#deletedBlocks div.class1').length;
 	if (count-1 == 0) {
-		document.getElementById('infoDeleted').innerHTML = '<h3 id="infoDeleted">Удалённые блоки</h3>'
+		document.getElementById('infoDeleted').innerHTML = '<h3 id="infoDeleted">Удалённые блоки</h3>';
 	}
 	else {
-		count = count-1
+		count = count-1;
 		document.getElementById('infoDeleted').innerHTML = '<h3 id="infoDeleted">Удалённые блоки '+count+'</h3>';
 	}
 }
@@ -103,35 +91,31 @@ function newHotel() {
 	    var dv = document.getElementById('place');
 	    dv.appendChild(div);
 	    place();
-	    document.getElementById('form').reset();
-		$('.close').click(function(){ 
-			$(this.parentNode).clone().appendTo('#deletedBlocks'); 
-			$(this.parentNode).remove(); 
+	    reset();
+		$('.close').click(function(){
+			$(this.parentNode).clone().appendTo('#deletedBlocks');
+			$(this.parentNode).remove();
 		});
 		$("#place div.class1:last-child").clone().appendTo('#history');
-      	alert('отель '+nameHotel+' успешно добавлен.');
+      	alert('Отель '+nameHotel+' успешно добавлен.');
 	}
 }
 
-function open1() {
-	if ($("#podMenuHistory").css('display') == 'none') { 
-        $("#podMenuHistory").animate({height: 'show'}, 700); 
+function show(id) {
+	if ($(id).css('display') == 'none') { 
+        $(id).animate({height: 'show'}, 700); 
     } 
     else {     
-        $("#podMenuHistory").animate({height: 'hide'}, 700); 
+        $(id).animate({height: 'hide'}, 700); 
     }
 }
 
-function open2() {
-	if ($("#podMenuDeleted").css('display') == 'none') { 
-        $("#podMenuDeleted").animate({height: 'show'}, 700); 
-    } 
-    else {     
-        $("#podMenuDeleted").animate({height: 'hide'}, 700); 
-    }
+function open(event) {
+	var id = $(event.path).find('ol').attr('id');
+	show('#'+id);
 }
 
-function closeLocation() {
+function deleteLocation() {
 	var x = document.querySelectorAll(".close");
 	if ($(".close").css('display') == 'none') { 
 		for (var i = 0; i < x.length; i++) {
@@ -146,7 +130,6 @@ function closeLocation() {
 $('.close').click(function(){
 	$(this.parentNode).clone().appendTo('#deletedBlocks');
 	$(this.parentNode).remove();
-
 });
 
 $('.closeAll').click(function(){
@@ -154,16 +137,8 @@ $('.closeAll').click(function(){
 	$("#place .class1").remove();
 });
 
-$('#more').click(function(){
-	$("#place .more").css('display') == 'block';
-});
-
-function more() {
-	document.querySelector('')
-}
-
 function cancel() {
-	document.getElementById('form').reset();
+	reset();
 	place();
 }
 
@@ -172,4 +147,16 @@ function image() {
 	var img = document.getElementById('img_hotel');
 	img.src = x;
 	return x;
+}
+
+function reset() {
+	document.getElementById('form').reset();
+}
+
+function hide() {
+	document.getElementById('place').style.display = "none";
+	document.getElementById('selected').style.display = "none";
+	document.getElementById('history').style.display = "none";
+	document.getElementById('deletedBlocks').style.display = "none";
+	document.getElementById("createHotel").style.display = "none";
 }
