@@ -1,5 +1,5 @@
 body {
-	background-color: #006699;
+	background-color: #C8FEBD;
 	margin: 0;
 }
 
@@ -14,19 +14,124 @@ em {
 /*Верх страницы*/
 #head {
 	position: relative;
-	background-color: #FF9900;
+	background: url(../image/green.jpg) no-repeat;
+	background-size: 100%;
 	left: 0;
 	top: 0;
-	margin: 0;
-	padding: 10px 0px 10px;
-	margin-bottom: 1%;
+	padding: 10px;
 }
+
+#headMenu {
+	background-color: white;
+	border-bottom: 1px solid black;
+	margin-bottom: 1%;
+/*	padding: 10px;*/
+/*	padding-right: 15px;*/
+	box-shadow: 0 0 0,2px 0 2px #d5d5d5,
+					-2px 0 2px #d5d5d5,
+					0 2px 2px #d5d5d5;
+}
+
+.headMenu {
+	padding-left: 18%;
+}
+
+.left {
+	float: left;
+}
+
+.top {
+	left: 0;
+	border: 1px solid black;
+	display: inline;
+}
+
+.top:hover {
+	position: relative;
+	align-self: center;
+	cursor: pointer;
+	background-color: red;
+}
+
+.rightMenu {
+	min-width: 10%;
+	max-width: 15%;
+	padding-left: 20px;
+	float: left;
+
+}
+.userImage img {
+	float: left;
+	height: 40px;
+	width: 40px;
+	margin-right: 5px;
+	border-radius: 30px;
+}
+
+td img {
+	padding: 5px;
+	float: left;
+	height: 30px;
+	margin-right: 5px;
+	width: 30px;
+}
+
+.center {
+	vertical-align: middle;
+}
+.userName {
+	padding-top: 10px;
+}
+
+.func {
+	padding-top: 10px: 
+}
+
+.headMenu td{
+	padding: 10px;
+}
+
+td:hover {
+	background-color: #D8DAD7;
+	cursor: pointer;
+}
+
+.down {
+	height: 40px;
+	width: 40px;
+	float: left;
+	padding: 0 15px;
+	transform: rotate(180deg);
+}
+
+.down:hover {
+	transform: rotate(360deg);
+}
+
+.userMenu tr:hover {
+	background-color: #D8DAD7;
+	cursor: pointer;
+}
+
+.rightMenu hr {
+	left: 0;
+	width: 90%;
+}
+
+.two {
+	width: 100%;
+}
+
+table {
+	border-collapse: collapse;
+}
+
 /*конец*/
 
 /*Стандартные настройки ссылок*/
 a {
 	text-decoration: none;
-	color: white;
+	color: black;
 }
 
 a:hover {
@@ -35,7 +140,6 @@ a:hover {
 /*конец*/
 /*Основные классы/блоки*/
 .class,
-.selected,
 .hotel {
 	min-width: 545px;
 	margin-left: 18%;
@@ -45,7 +149,7 @@ a:hover {
 .class1 {
 	background-color: white;
 	padding-bottom: 1%;
-	border: 1px solid #F76320;
+	border: 1px solid #4EC021;
 	display: block;
 	box-shadow: 0 0 0,2px 0 2px #d5d5d5,
 					-2px 0 2px #d5d5d5,
@@ -54,9 +158,7 @@ a:hover {
 .class1:first-child {
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	box-shadow: 0 -2px 2px #d5d5d5,
-				2px -2px 2px #d5d5d5,
-				-2px -2px 2px #d5d5d5;
+
 }
 
 .class1:last-child {
@@ -172,7 +274,7 @@ a.save:active {
 
 /*Настройка формы*/
 fieldset {
-	border-color: #317ED8;
+	border-color: #E3FDDD;
 	border-radius: 10px;
 }
 
@@ -186,6 +288,11 @@ textarea {
 /*Обтекание*/
 .left {
 	float: left;
+	width: 50%;
+}
+
+.rightText {
+	text-align: right;
 }
 
 .right {
@@ -218,13 +325,15 @@ textarea {
 	border-radius: 10px;
 }
 
-.menu ul li {
-	margin: 0 10px 0 -30px;
+ol li {
+	margin: 0 10px;
 	list-style-type: none;
 }
 
 #podMenuDeleted,
 #podMenuHistory {
+	height: -10px;
+	position: relative;
 	display: none;
 }
 

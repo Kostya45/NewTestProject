@@ -9,15 +9,36 @@
 </head>
 <body>
 	<div id="head">
-		Лучшие отели мира!
+		<div class="left">Лучшие отели мира!</div>
+		<div class="rightText">Выход</div>
 	</div>
-	<div class="menu">
+
+	<div id="headMenu"> 
+		<img class="down" src="image/strelka.png">
+		<div class="headMenu">
+			<table>
+				<tr>
+					<td id="placeView">Список мест</td>
+					<td>Избранные</td>
+					<td id="historyS" class="red">История
+						<ol id="podMenuHistory">
+							<li id="historyView"><a href="#3">Добавленные</a></li>
+							<li id="deletedBlocksView"><a href="#4">Удалённые</a></li>
+						</ol></td>
+						
+					<td title="не работает">Карта</td> 
+					<td id="newHotel">Новый Отель</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+<!-- 	<div class="menu">
 		<ul>
 			<li id="placeView"><a href="#1">Список мест</a></li>
 			<li id="newHotel"><a href="#5">Новая Гостиница</a></li>
+			<li id="selected"><a href="#6">Избранные</a></li>
 			<li id="historyS" class="red"><a href="#5" title="открыть подменю">История</a>
 				<ol id="podMenuHistory">
-					<li id="selectedView"><a href="#2">Избранные</a></li>
 					<li id="historyView"><a href="#3">Добавленные</a></li>
 					<li id="deletedBlocksView"><a href="#4">Удалённые</a></li>
 				</ol>
@@ -29,11 +50,58 @@
 				</ol>
 			</li>
 		</ul>
+	</div> -->
+	<div class="rightMenu">
+		<div class="user">
+			<div class="userImage">
+				<img src="image/iconUser.jpg" alt="Иконка">
+			</div>
+			<div class="userName">Юля футболист</div>
+		</div>
+		<br>
+		<hr>
+		<div class="userMenu">
+			<table id="menu">
+				<tr>
+					<td class="center"><img src="image/convert.png" alt="Картинка"></td>
+					<td title="не работает" class="two">Сообщения</td>
+				</tr>
+				<tr>
+					<td><img src="image/zvonk.png" alt="Картинка"></td>
+					<td title="не работает">События</td>
+				</tr>
+				<tr>
+					<td><img src="image/friends.png" alt="Картинка"></td>
+					<td title="не работает">Друзья</td>
+				</tr>
+				<tr>
+					<td><img src="image/form.png" alt="Картинка"></td>
+					<td title="не работает">Шаблоны</td>
+				</tr>
+				<tr>
+					<td><img src="image/done.png" alt="Картинка"></td>
+					<td title="не работает">Задачи</td>
+				</tr>
+				<tr>
+					<td><img src="image/mesta.jpg" alt="Картинка"></td>
+					<td title="не работает">Места</td>
+				</tr>
+				<tr>
+					<td><img src="image/setting.png" alt="Картинка"></td>
+					<td id="deletedView" class="red">Настройки</td>
+				</tr>
+			</table>
+			<ol id="podMenuDeleted">
+				<li id="closeLoc"><a href="#6">Удалить блок</a></li>
+				<li id="closeAll" class="closeAll"><a href="#7">Удалить всё</a></li>
+			</ol>
+			<hr>
+		</div>
 	</div>
 	<div class="class" id="place">
 		<div class="class1">
 			<img class="image" src="image/new.png" alt="image">
-			<a class="close" href="#2" name="close"><img src="image/close.png" alt="close" title="удалить блок"></a>
+			<a class="close" href="#2"><img src="image/close.png" alt="close" title="удалить блок"></a>
 			<br><span class="color">Umaid Bhawan Palace Jodhpur</span>
 			<br><span class="grey">адресс :</span> Near Circuit House, Джодхпур 342006, Индия
 			<br><span class="grey">контакты :</span> (+34)93-603-90-00 (+34)93-268-19-45 | <a href="http://taj.tajhotels.com" target="_blank">taj.tajhotels.com</a> , umaidbhawan.jodhpur@tajhotels.com
@@ -211,11 +279,6 @@
 			</div>
 			<br><a href="#more"><em>Больше</em></a>
 			<br>
-		</div>
-	</div>
-	<div class="class" id="selected">
-		<div class="class1">
-			<h3 id="infoSelected">Выбарнные</h3>
 		</div>
 	</div>
 	<div class="class" id="history">
